@@ -1,3 +1,6 @@
+from cuentaCorriente import cuentaCorriente
+from cuentAhorro import cuentAhorro
+
 class simuladorBancario:
     
     #aqui va el codigo
@@ -14,23 +17,20 @@ class simuladorBancario:
     #Metodos
     ------------------'''
 
-    def consignarValor(self, cValor):
-        #aqui va el codigo
-        self.valor = cValor
-        return "El valor consignado es: " + self.valor
-
-
-    def consultarSaldo(self):
-        #aqui va el codigo
-        return "Su saldo es: " + self.saldo
-
-
-
-    def retirarValor(self):
-        #aqui va el codigo
-        return "El valor retirado es: " + self.retirar
-
-
-    def consultarInteresMensual(self):
-        #aqui va el codigo
-        return "Los interes mensuales son: " + self.conInteres
+     def ConsignarCuentaCorriente(self):
+        cosignar = self.cuentaCorriente()
+        return cosignar
+    
+    def ConsultarSaldoTotalAhorro(self):
+        SaldoTotalA = self.cuentaAhorro()
+        return SaldoTotalA
+    
+    def ConsultarSaldoTotalCorriente(self):
+        SaldoTotalC = self.cuentaCorriente()
+        return SaldoTotalC
+    
+    def PasarDeAhorroCorriente(self):
+        pasra = self.cuentaAhorro()
+        pasado = self.cuentaCorriente() 
+    # hacer lo siguientes metodos agregar las asociaciones en el caso dos, cuenta bancaria,  cosignar cuenta corriente, calcular saldo total 
+    # cuenta de ahorro. Cuenta corriente, pasar de ahorros a corriente 
