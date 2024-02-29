@@ -6,3 +6,17 @@ class cuentaAhorro:
     --------------------'''
     saldo = 0
     interesMensual = 0
+
+      '''-----------------
+     # metodos 
+    --------------------'''
+
+    def ConsultarSaldo(self):
+        # aqui va el codigo
+        return "Su salario es: "+ self.saldol
+    
+    def InteresMensual(self):
+       #aqui va el codigo
+       interes = self.saldo * 0.195
+       nSaldo = self.saldo + interes
+       self.saldo = nSaldo
