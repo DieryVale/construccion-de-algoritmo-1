@@ -15,3 +15,17 @@ class fecha:
     dia= 7
     mes= 12
     anio= 2024
+
+
+     '''----------------------------
+    # Metodos 
+    --------------------------------'''
+
+    def ConsultarDia(self):        
+        return self.dia 
+
+    def ConsultarMes(self):        
+        return self.mes
+    
+    def ConsultarAnio(self):        
+        return self.anio 
