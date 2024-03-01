@@ -26,3 +26,7 @@ class cuentaCorriente:
         nSaldo = self.saldo - retiro
         self.saldo = nSaldo
         return "Usted ha retirado "+ retiro
+    
+    def DuplicarSaldo(self):
+        # aqui va el codigo
+        self.nSaldo *= 2 
