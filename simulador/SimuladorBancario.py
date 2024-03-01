@@ -17,7 +17,7 @@ class simuladorBancario:
     #Metodos
     ------------------'''
 
-     def ConsignarCuentaCorriente(self):
+    def ConsignarCuentaCorriente(self):
         cosignar = self.cuentaCorriente()
         return cosignar
     

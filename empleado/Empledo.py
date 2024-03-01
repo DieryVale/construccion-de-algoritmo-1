@@ -31,7 +31,7 @@ class Empleado:
         self.salario = nSalario
         return "Su nuevo salario es: " + self.salario
 
-     def DuplicarSalario(self):
+    def DuplicarSalario(self):
         #forma 1
         nuevoSalario = self.salario * 2
         self.salario = nuevoSalario
