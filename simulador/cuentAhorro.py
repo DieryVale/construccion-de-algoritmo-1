@@ -27,3 +27,10 @@ class cuentaAhorro:
        nSaldo = self.saldo-retiro
        self.saldo < retiro
        return "fondos insuficientes"
+     
+     def RetirarValor(self, retiro):
+        #aqui va el codigo
+        nSaldo = self.saldo - retiro
+        self.saldo > retiro
+        return "Su valor de retiro es: " + retiro
+
