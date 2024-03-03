@@ -1,3 +1,5 @@
+from Fecha import fecha
+
 class Empleado:
     #aqui va el codigo
     '''----------------------------
@@ -11,6 +13,12 @@ class Empleado:
      -----------------------------'''
     sexo=0
     salario=0
+
+    '''---------------------------
+     # Asociaciones
+    -------------------------------'''
+    fechaNacimiento = fecha()
+    fechaIngreso = fecha()
 
     '''----------------------------------------------
     #Metodos 
@@ -42,11 +50,11 @@ class Empleado:
 
     def CalcularSalarioAnual(self): #calcular el impuesto anual del 19.5 iba 
         # forma 1
-        salariAnual = self.salrio * 12        
-        return salariAnual 
+        salarioAnual = self.salrio * 12        
+        return salarioAnual 
 
         #forma 2
-        # return "Su salario anual es: " + self.salario*12 cont k + c, contr k + u
+        # return "Su salario anual es: " + self.salario*12 // comentar lineas cont k + c, contr k + u
     
     def ConsultarDiaCumpleaños(self):
         return self.fechaNacimiento.ConsultarDia() 
