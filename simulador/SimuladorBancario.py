@@ -1,5 +1,6 @@
 from cuentaCorriente import cuentaCorriente
-from cuentAhorro import cuentAhorro
+from cuentAhorro import cuentaAhorro
+from CDT import CDT
 
 class simuladorBancario:
     
@@ -10,27 +11,66 @@ class simuladorBancario:
     --------------------'''
     cedula = 0
     nombre=''
-    ingresAct = 0
-    valor = 0
+    mesActual = 0
+
+    '''---------------------
+    # Asociaciones
+    ------------------------'''
+    ahorros = cuentaAhorro()
+    corriente = cuentaCorriente()
+    cdt = CDT()
 
     '''-----------------
     #Metodos
     ------------------'''
 
-    def ConsignarCuentaCorriente(self):
-        cosignar = self.cuentaCorriente()
-        return cosignar
+    def CalcularSaldoTotal(self):
+        # forma 1 
+        return self.ahorros.consultarSaldo() + self.corriente.ConsultarSaldo()
+        #forma 2 
+        # total = self.ahorros.Consultarsaldo() + self.coerriente.ConsultarSaldo()
+        # return total
+        # forma 3 - forma no recomendada // por vulnerabilidad 
+        # total = self.ahorros.saldo + self.corriente.saldo
+        # return total
+
+    def ConsignarCuentaCorriente(self, monto):
+        self.corriente.ConsignarMonto(monto)
+        
     
-    def ConsultarSaldoTotalAhorro(self):
-        SaldoTotalA = self.cuentaAhorro()
-        return SaldoTotalA
+    def ConsignarCuentaAhorro(self, monto):
+        self.ahorros.ConsignarMonto(monto)  
+
+    def TrasferirAhorrosACorriente(self):
+        self.ConsignarCuentaCorriente(self.ahorros.ConsultarSaldo())
+        self.ahorros.RetirarMonto(self.ahorros.ConsultarSaldo())
+
+    def DuplicarAhorros(self):
+        self.ConsignarCuentaAhorro(self.ahorros.ConsultarSaldo())
+
+    def RetirarCuentaCorriente(self, monto):
+        self.corriente.RetirarMonto(monto)
+
+    def RetirarCuentaAhorros(self, monto):
+        self.ahorros.RetirarMonto(monto)
+
+    def RetirarTodo(self):
+        total = self.CalcularSaldoTotal()
+        self.TrasferirAhorrosACorriente()
+        self.RetirarCuentaCorriente(total)
+
+        return total
+
+    '''--------------------------'''      
+    # revisar 
+    # def ConsultarSaldoTotalCorriente(self):
+    #     SaldoTotalC = self.cuentaCorriente()
+    #     return SaldoTotalC
     
-    def ConsultarSaldoTotalCorriente(self):
-        SaldoTotalC = self.cuentaCorriente()
-        return SaldoTotalC
-    
-    def PasarDeAhorroCorriente(self):
-        pasra = self.cuentaAhorro()
-        pasado = self.cuentaCorriente() 
+    # def PasarDeAhorroCorriente(self):
+    #     pasra = self.cuentaAhorro()
+    #     pasado = self.cuentaCorriente() 
+
+
     # hacer lo siguientes metodos agregar las asociaciones en el caso dos, cuenta bancaria,  cosignar cuenta corriente, calcular saldo total 
     # cuenta de ahorro. Cuenta corriente, pasar de ahorros a corriente 

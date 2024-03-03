@@ -15,18 +15,34 @@ class cuentaCorriente:
         # aqui va el codigo 
         return "Su salario actual es: " + self.saldo
     
-    def DepositarValor(self,deposito):
-        #aqui va el codigo
-        nSaldo = self.saldo + deposito
-        self.saldo = nSaldo
-        return "Usted ha despositado " + deposito
+    def ConsignarMonto(self, monto):
+        #forma 1 
+        self.saldo += monto
+        #forma 2
+        #self.saldo = self.saldo + monto
+
+    def RetirarMonto(self, monto):
+        #forma 1 
+        self.saldo -= monto
+        # forma 2
+        #self.saldo = self.saldo - monto
+
+        
+
+    '''------------------------------------''' 
     
-    def RetirarValor(self, retiro):
-        # aqui va el codigo
-        nSaldo = self.saldo - retiro
-        self.saldo = nSaldo
-        return "Usted ha retirado "+ retiro
+    # def DepositarValor(self,deposito):
+    #     #aqui va el codigo
+    #     nSaldo = self.saldo + deposito
+    #     self.saldo = nSaldo
+    #     return "Usted ha despositado " + deposito
     
-    def DuplicarSaldo(self):
-        # aqui va el codigo
-        self.nSaldo *= 2 
+    # def RetirarValor(self, retiro):
+    #     # aqui va el codigo
+    #     nSaldo = self.saldo - retiro
+    #     self.saldo = nSaldo
+    #     return "Usted ha retirado "+ retiro
+    
+    # def DuplicarSaldo(self):
+    #     # aqui va el codigo
+    #     self.nSaldo *= 2 
