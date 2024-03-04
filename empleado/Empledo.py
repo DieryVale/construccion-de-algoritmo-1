@@ -6,19 +6,30 @@ class Empleado:
     #Atributos
     -------------------------------'''
 
-    nombres=''
-    apellidos=''
+    nombres = ''
+    apellidos = ''
     '''--------------------------
      1 = Masculino y 2 = Femenino
      -----------------------------'''
-    sexo=0
-    salario=0
+    sexo = 0
+    salario = 0
 
     '''---------------------------
      # Asociaciones
     -------------------------------'''
     fechaNacimiento = fecha()
     fechaIngreso = fecha()
+
+    '''--------------------------
+     # Constructor
+    -----------------------------'''
+
+    def __init__(self, nombres, apellidos, salario, sexo):
+        self.nombres = nombres
+        self.apellidos = apellidos
+        self.salario = salario
+        self.sexo = sexo
+
 
     '''----------------------------------------------
     #Metodos 
