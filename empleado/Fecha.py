@@ -12,7 +12,7 @@ class fecha:
     #Atributos
     -------------------------------'''
     
-    dia= 7
+    dia= 27
     mes= 12
     anio= 2024
 

@@ -4,4 +4,5 @@ empleado1 = Empleado('Juan', 'Perez', 1000000, 1) # clonar liena alt shift + fle
 empleado2 = Empleado('Pedro', 'Martinez', 6000000, 1)
 empleado3 = Empleado('Maria', 'Benitez', 8000000, 2)
 
-print(empleado3.ConsultarSalario())
+print(empleado1.ConsultarSalario())
+print(empleado2.ConsultarNombre())
