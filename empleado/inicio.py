@@ -6,3 +6,6 @@ empleado3 = Empleado('Maria', 'Benitez', 8000000, 2)
 
 print(empleado1.ConsultarSalario())
 print(empleado2.ConsultarNombre())
+print(empleado3.sexo)
+
+

@@ -8,11 +8,13 @@ class Empleado:
 
     nombres = ''
     apellidos = ''
+    salario = 0
+    sexo = 0
+
     '''--------------------------
      1 = Masculino y 2 = Femenino
      -----------------------------'''
-    sexo = 0
-    salario = 0
+   
 
     '''---------------------------
      # Asociaciones
@@ -37,11 +39,24 @@ class Empleado:
     def cambirSalario(self, nSalario) :
         #aqui va el codigo
         self.salario = nSalario
-        return "Su nuevo salario es: " + self.salario       
+        return "Su nuevo salario es: " + self.salario
+
+    def CambiarEmpleado(self, nNombre, nApellido, nSexo, nSalario):
+        # Aqui va el codigo del nuevo empleado
+        return None       
 
     def ConsultarSalario(self):
-        #Aqui va el codigo
-        return self.salario    
+        #Aqui va el codigo del metodo
+        return self.salario
+
+    def ConsultarNombre(self):
+        return self.nombres    
+    
+    def ConsultarApellido(self):
+        return self.apellidos
+    
+    def ConsultarNombreCompleto(self):
+        return self.nombres + ' '+ self.apellidos
     
     def AumentoSalario(self):
         #aqui va el codigo
@@ -49,6 +64,14 @@ class Empleado:
         nSalario = self.salario+aumentar
         self.salario = nSalario
         return "Su nuevo salario es: " + self.salario
+    
+    def Cambiarnombre(self, nNombre):
+        self.nombres = nNombre
+        return "El nuevo nombre es: "+ self.nombres
+    
+    def Cambiarnombre(self, nApellido):
+        self.apellidos = nApellido
+        return "El nuevo apellido es: "+ self.apellidos
 
     def DuplicarSalario(self):
         #forma 1
