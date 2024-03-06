@@ -3,7 +3,7 @@ from Fecha import fecha
 class Empleado:
     #aqui va el codigo
     '''----------------------------
-    #Atributos
+    # Atributos
     -------------------------------'''
 
     nombres = ''

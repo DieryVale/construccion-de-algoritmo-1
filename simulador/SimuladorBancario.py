@@ -12,6 +12,9 @@ class simuladorBancario:
     cedula = 0
     nombre=''
     mesActual = 0
+    VIP = 0
+    Platino = 0
+    Normal = 0
 
     '''---------------------
     # Asociaciones
@@ -19,6 +22,19 @@ class simuladorBancario:
     ahorros = cuentaAhorro()
     corriente = cuentaCorriente()
     cdt = CDT()
+
+    '''------------------------
+    # Constructor
+    ----------------------------'''
+    def __init__(self,cedula, nombre, mesActual, VIP, Platino, Normal):
+
+        self.cedula = cedula
+        self.nombre = nombre
+        self.mesActual = mesActual
+        self.VIP = VIP
+        self.Platino = Platino
+        self.Normal = Normal
+
 
     '''-----------------
     #Metodos
@@ -60,6 +76,9 @@ class simuladorBancario:
         self.RetirarCuentaCorriente(total)
 
         return total
+    
+    def cambiarTipoCliente(self, nuevoTipoClinete):
+        self.cliente = nuevoTipoClinete 
 
     '''--------------------------'''      
     # revisar 
