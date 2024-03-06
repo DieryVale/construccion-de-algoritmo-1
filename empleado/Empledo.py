@@ -10,6 +10,7 @@ class Empleado:
     apellidos = ''
     salario = 0
     sexo = 0
+    hijos = 0 
 
     '''--------------------------
      1 = Masculino y 2 = Femenino
@@ -26,11 +27,12 @@ class Empleado:
      # Constructor
     -----------------------------'''
 
-    def __init__(self, nombres, apellidos, salario, sexo):
+    def __init__(self, nombres, apellidos, salario, sexo, hijos):
         self.nombres = nombres
         self.apellidos = apellidos
         self.salario = salario
         self.sexo = sexo
+        self.hijos = hijos
 
 
     '''----------------------------------------------
@@ -58,6 +60,9 @@ class Empleado:
     def ConsultarNombreCompleto(self):
         return self.nombres + ' '+ self.apellidos
     
+    def ConsultarCuantosHijos(self):
+        return self.hijos
+    
     def AumentoSalario(self):
         #aqui va el codigo
         aumentar = self.salario*0.05
@@ -69,7 +74,7 @@ class Empleado:
         self.nombres = nNombre
         return "El nuevo nombre es: "+ self.nombres
     
-    def Cambiarnombre(self, nApellido):
+    def CambiarApellido(self, nApellido):
         self.apellidos = nApellido
         return "El nuevo apellido es: "+ self.apellidos
 
@@ -101,6 +106,13 @@ class Empleado:
 
         #forma 2        
         # return self.CalcularSalarioAnual() * 0.195
+    
+    def AuxilioEmpleadoPorHijos(self, hijos):
+        self.salario += hijos * 0.05
+
+    def CalcualarDiferenciaSalarial (self,Empleado1, Empleado2 ): # pendiente punto 5 
+        self.salario.Empleado1 -= self.salario.empleado2
+
     
     # hacer lo siguientes metodos agregar las asociaciones en el caso dos, cuenta bancaria  cosignar cuenta corriente, calcular saldo total 
     # cuenta de ahorro. Cuenta corriente, pasar de ahorros a corriente 
