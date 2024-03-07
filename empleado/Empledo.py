@@ -110,8 +110,8 @@ class Empleado:
     def AuxilioEmpleadoPorHijos(self, hijos):
         self.salario += hijos * 0.05
 
-    def CalcualarDiferenciaSalarial (self,Empleado1, Empleado2 ): # pendiente punto 5 
-        self.salario.Empleado1 -= self.salario.empleado2
+    def diferenciaSalarial(self, otroEmpleado):
+        return abs(self.salario - otroEmpleado.salario) # abs devuelve el valor absoluto de un numero  eje abs(-5) devuelve 5
 
     
     # hacer lo siguientes metodos agregar las asociaciones en el caso dos, cuenta bancaria  cosignar cuenta corriente, calcular saldo total 
